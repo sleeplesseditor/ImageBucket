@@ -1,5 +1,5 @@
 //Image List Component
-import React from 'react';
+import React, { Component } from 'react';
 import ImageDetail from './ImageDetail';
 
 const IMAGES = [
@@ -8,16 +8,17 @@ const IMAGES = [
     { title: 'Mug', link: 'https://dummyimage.com/600x400' },
 ];
 
-const ImageList = () => {
-    const RenderedImages = IMAGES.map(function(image) {
-        return <ImageDetail image={image} />
-    });
-
-    return (
-        <ul className="media-list list-group">
-            {RenderedImages}
-        </ul>
-    );
+class ImageList extends Component {
+    render() {
+        const RenderedImages = IMAGES.map(image =>
+            <ImageDetail key={image.title} image={image} />
+        );
+        return (
+            <ul className="media-list list-group">
+                {RenderedImages}
+            </ul>
+        );
+    }  
 };
 
 export default ImageList;

@@ -3,7 +3,7 @@ import React from 'react';
 
 const ImageDetail = (props) => {
     return (
-        <li className="media-list group-item">
+        <li className="media list-group-item">
             <div className="media-left">
                 <img src={props.image.link} />
             </div>
