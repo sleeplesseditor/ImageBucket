@@ -1,10 +1,11 @@
 //Image List Component
 import React from 'react';
+import ImageDetail from './ImageDetail';
 
 const ImageList = () => {
     return (
         <ul>
-            <li>Image Detail</li>
+            <ImageDetail />
         </ul>
     );
 };
